@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aaas
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: aaas
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: aaas
+    spec:
+      containers:
+      - name: aaas
+        image: registry.digitalocean.com/seaburr/aaas:latest
+        ports:
+        - containerPort: 8000
+          protocol: TCP
