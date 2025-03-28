@@ -6,14 +6,10 @@ metadata:
   namespace: flux-system
 spec:
   targetNamespace: default
-  chart:
-    spec:
-      chart: kubernetes-event-exporter
-      version: 3.3.5
-      sourceRef:
-        kind: HelmRepository
-        name: k8s-event-exporter
-        namespace: flux-system
+  chartRef:
+    kind: OCIRepository
+    name: k8s-event-exporter
+    namespace: flux-system
   interval: 5m
   values:
     replicaCount: 1
