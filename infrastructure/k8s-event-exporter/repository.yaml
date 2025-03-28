@@ -11,4 +11,4 @@ spec:
     operation: copy
   url: oci://registry-1.docker.io/bitnamicharts/kubernetes-event-exporter
   ref:
-    semver: ">= 3.3.5"
+    semver: "= 3.3.5"
