@@ -1,0 +1,10 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: k8s-event-exporter
+  namespace: flux-system
+spec:
+  interval: 60m0s
+  url: oci://registry-1.docker.io/bitnamicharts
+  type: oci
